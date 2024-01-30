@@ -1,0 +1,87 @@
+/* Custom CSS */
+
+/* Font Family */
+body, h1, h2, h3, h4, h5, h6, p, a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('bg3.jpg'); /* Replace 'your-image.jpg' with your image path */
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  
+  /* About Me Section */
+  .about {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  
+  /* Projects Section */
+  .projects {
+    padding: 50px 0;
+    opacity: 0; /* Set initial opacity to 0 to prepare for the animation */
+  }
+  
+  /* Contact Section */
+  .contact {
+    background-color: #f9f9f9;
+    padding: 50px 0;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  /* Navbar Links */
+  .navbar-nav .nav-link {
+    color: #333;
+  }
+  
+  /* Define the keyframes for the scroll-down animation */
+  @keyframes scrollDownAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the animation to the projects section */
+  .projects {
+    animation: scrollDownAnimation 9s ease-in-out;
+    animation-fill-mode: forwards; /* Animation stays after being animated */
+  }
+  
+  /* Animations */
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .fade-in {
+    opacity: 0;
+    animation: fadeInAnimation 1s ease-in forwards;
+  }
+  
+  /* Apply animation to the project cards */
+  .projects .card {
+    animation: fadeIn 10s ease-in-out;
+  }
